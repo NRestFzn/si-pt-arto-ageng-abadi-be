@@ -1,8 +1,10 @@
 import hpp from 'hpp'
+import fs from 'fs'
 import cors from 'cors'
 import path from 'path'
 import helmet from 'helmet'
 import requestIp from 'request-ip'
+import swaggerUi from 'swagger-ui-express'
 import Route from '@/routes/index.route'
 import compression from 'compression'
 import cookieParser from 'cookie-parser'
@@ -49,6 +51,8 @@ export class App {
   }
 
   private _routes() {
+    this._setupSwaggerDocs()
+
     this._app.use(Route)
 
     // Catch error 404 endpoint not found
@@ -63,6 +67,39 @@ export class App {
         `Sorry, the ${endpoint} HTTP method ${method} resource you are looking for was not found.`
       )
     })
+  }
+
+  private _setupSwaggerDocs() {
+    const openApiDocument = this._loadOpenApiDocument()
+
+    if (!openApiDocument) {
+      return
+    }
+
+    this._app.get('/docs/openapi.json', (_req: Request, res: Response) => {
+      res.status(200).json(openApiDocument)
+    })
+
+    this._app.use('/docs', swaggerUi.serve, swaggerUi.setup(openApiDocument))
+  }
+
+  private _loadOpenApiDocument(): Record<string, unknown> | null {
+    const candidatePaths = [
+      path.resolve(process.cwd(), 'apidog.openapi.json'),
+      path.resolve(__dirname, '../../apidog.openapi.json'),
+    ]
+
+    const filePath = candidatePaths.find((candidatePath) =>
+      fs.existsSync(candidatePath)
+    )
+
+    if (!filePath) {
+      return null
+    }
+
+    const fileContent = fs.readFileSync(filePath, 'utf-8')
+
+    return JSON.parse(fileContent) as Record<string, unknown>
   }
 
   public get create() {

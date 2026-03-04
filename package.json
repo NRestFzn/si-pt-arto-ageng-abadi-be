@@ -25,6 +25,7 @@
     "db:reset": "npm-run-all db:drop db:create db:migrate db:seed"
   },
   "dependencies": {
+    "@types/swagger-ui-express": "^4.1.8",
     "argon2": "^0.43.1",
     "compression": "^1.8.1",
     "cookie-parser": "^1.4.7",
@@ -45,6 +46,7 @@
     "sequelize": "^6.37.7",
     "sequelize-typescript": "^2.1.6",
     "slugify": "^1.6.6",
+    "swagger-ui-express": "^5.0.1",
     "uuid": "^11.1.0",
     "yup": "^1.6.1",
     "zod": "^4.0.8"
