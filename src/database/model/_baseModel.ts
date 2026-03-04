@@ -24,10 +24,10 @@ export default class BaseSchema extends Model {
   id: string
 
   @CreatedAt
-  @Column({ allowNull: false, type: DataTypes.DATE })
+  @Column({ allowNull: false, type: DataTypes.DATE, field: 'created_at' })
   createdAt!: Date
 
   @UpdatedAt
-  @Column({ allowNull: false, type: DataTypes.DATE })
+  @Column({ allowNull: false, type: DataTypes.DATE, field: 'updated_at' })
   updatedAt!: Date
 }

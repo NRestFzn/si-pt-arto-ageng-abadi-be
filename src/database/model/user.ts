@@ -3,7 +3,6 @@ import {
   BeforeCreate,
   BeforeUpdate,
   Column,
-  DataType,
   DefaultScope,
   ForeignKey,
   Scopes,
@@ -38,14 +37,21 @@ export default class User extends BaseSchema {
   @Column({ allowNull: false, type: DataTypes.STRING })
   email: string
 
+  @Unique
+  @Column({ allowNull: true, type: DataTypes.STRING })
+  username?: string
+
   @Column({ type: DataTypes.STRING })
   password: string
 
-  @Column({ type: DataType.STRING, allowNull: true })
-  profilePicture: string
+  @Column({ type: DataTypes.STRING, allowNull: true })
+  position?: string
+
+  @Column({ type: DataTypes.STRING, allowNull: true, field: 'profile_picture' })
+  profilePicture?: string
 
   @ForeignKey(() => Role)
-  @Column({ allowNull: false, type: DataTypes.UUID })
+  @Column({ allowNull: false, type: DataTypes.UUID, field: 'role_id' })
   RoleId: string
 
   @BelongsTo(() => Role)

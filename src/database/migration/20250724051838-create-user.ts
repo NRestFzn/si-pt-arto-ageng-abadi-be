@@ -7,7 +7,7 @@ export async function up(
   queryInterface: QueryInterface,
   Sequelize: typeof DataTypes
 ) {
-  await queryInterface.createTable('user', {
+  await queryInterface.createTable('users', {
     id: {
       allowNull: false,
       primaryKey: true,
@@ -27,27 +27,34 @@ export async function up(
       allowNull: false,
       type: Sequelize.STRING,
     },
-    RoleId: {
+    username: {
+      allowNull: true,
+      type: Sequelize.STRING,
+      unique: true,
+    },
+    position: {
+      allowNull: true,
+      type: Sequelize.STRING,
+    },
+    profile_picture: {
+      allowNull: true,
+      type: Sequelize.STRING,
+    },
+    role_id: {
       allowNull: false,
       type: Sequelize.UUID,
       references: {
-        model: 'role',
+        model: 'roles',
         key: 'id',
       },
+      onUpdate: 'CASCADE',
+      onDelete: 'RESTRICT',
     },
-    gender: {
-      allowNull: false,
-      type: Sequelize.ENUM('m', 'f'),
-    },
-    birthDate: {
-      allowNull: false,
-      type: Sequelize.DATEONLY,
-    },
-    createdAt: {
+    created_at: {
       allowNull: false,
       type: Sequelize.DATE,
     },
-    updatedAt: {
+    updated_at: {
       allowNull: false,
       type: Sequelize.DATE,
     },
@@ -58,5 +65,5 @@ export async function down(
   queryInterface: QueryInterface,
   Sequelize: typeof DataTypes
 ) {
-  await queryInterface.dropTable('user')
+  await queryInterface.dropTable('users')
 }

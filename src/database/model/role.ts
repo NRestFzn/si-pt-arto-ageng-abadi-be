@@ -5,7 +5,7 @@ import User from './user'
 
 @Table({ freezeTableName: true, tableName: 'roles' })
 export default class Role extends BaseSchema {
-  @Column({ allowNull: false, type: DataTypes.STRING })
+  @Column({ allowNull: false, type: DataTypes.STRING, unique: true })
   name: string
 
   @HasMany(() => User)

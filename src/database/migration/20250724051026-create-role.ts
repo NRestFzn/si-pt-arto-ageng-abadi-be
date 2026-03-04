@@ -7,7 +7,7 @@ export async function up(
   queryInterface: QueryInterface,
   Sequelize: typeof DataTypes
 ) {
-  await queryInterface.createTable('role', {
+  await queryInterface.createTable('roles', {
     id: {
       allowNull: false,
       primaryKey: true,
@@ -19,11 +19,11 @@ export async function up(
       type: Sequelize.STRING,
       unique: true,
     },
-    createdAt: {
+    created_at: {
       allowNull: false,
       type: Sequelize.DATE,
     },
-    updatedAt: {
+    updated_at: {
       allowNull: false,
       type: Sequelize.DATE,
     },
@@ -34,5 +34,5 @@ export async function down(
   queryInterface: QueryInterface,
   Sequelize: typeof DataTypes
 ) {
-  await queryInterface.dropTable('role')
+  await queryInterface.dropTable('roles')
 }
