@@ -1,0 +1,1366 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "SI API",
+    "version": "1.0.0",
+    "description": "Apidog importable OpenAPI for auth/role/user and db.txt scaffolded modules"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/v1/auth/signup": {
+      "post": {
+        "tags": ["auth"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSignupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "$ref": "#/components/responses/SuccessResponse"
+          }
+        }
+      }
+    },
+    "/v1/auth/signin": {
+      "post": {
+        "tags": ["auth"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSigninRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/SuccessResponse"
+          }
+        }
+      }
+    },
+    "/v1/role": {
+      "get": {
+        "tags": ["role"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["role"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/role/{id}": {
+      "get": {
+        "tags": ["role"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["role"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["role"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/user/me": {
+      "get": {
+        "tags": ["user"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["user"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/user/update/profile-picture": {
+      "put": {
+        "tags": ["user"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "profilePicture": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/navigations": {
+      "get": {
+        "tags": ["navigations"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["navigations"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/navigations/{id}": {
+      "get": {
+        "tags": ["navigations"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["navigations"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["navigations"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/role_has_navigations": {
+      "get": {
+        "tags": ["role_has_navigations"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["role_has_navigations"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/role_has_navigations/{id}": {
+      "get": {
+        "tags": ["role_has_navigations"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["role_has_navigations"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["role_has_navigations"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/user_has_navigations": {
+      "get": {
+        "tags": ["user_has_navigations"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["user_has_navigations"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/user_has_navigations/{id}": {
+      "get": {
+        "tags": ["user_has_navigations"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["user_has_navigations"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["user_has_navigations"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/suppliers": {
+      "get": {
+        "tags": ["suppliers"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["suppliers"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/suppliers/{id}": {
+      "get": {
+        "tags": ["suppliers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["suppliers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["suppliers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/drivers": {
+      "get": {
+        "tags": ["drivers"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["drivers"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/drivers/{id}": {
+      "get": {
+        "tags": ["drivers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["drivers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["drivers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/customers": {
+      "get": {
+        "tags": ["customers"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["customers"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/customers/{id}": {
+      "get": {
+        "tags": ["customers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["customers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["customers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/employees": {
+      "get": {
+        "tags": ["employees"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["employees"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/employees/{id}": {
+      "get": {
+        "tags": ["employees"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["employees"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["employees"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/purchases": {
+      "get": {
+        "tags": ["purchases"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["purchases"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/purchases/{id}": {
+      "get": {
+        "tags": ["purchases"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["purchases"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["purchases"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/usage_delta_pressures": {
+      "get": {
+        "tags": ["usage_delta_pressures"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["usage_delta_pressures"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/usage_delta_pressures/{id}": {
+      "get": {
+        "tags": ["usage_delta_pressures"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["usage_delta_pressures"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["usage_delta_pressures"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/usage_evcs": {
+      "get": {
+        "tags": ["usage_evcs"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["usage_evcs"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/usage_evcs/{id}": {
+      "get": {
+        "tags": ["usage_evcs"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["usage_evcs"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["usage_evcs"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/usage_turbines": {
+      "get": {
+        "tags": ["usage_turbines"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["usage_turbines"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/usage_turbines/{id}": {
+      "get": {
+        "tags": ["usage_turbines"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["usage_turbines"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["usage_turbines"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/contract_key_terms": {
+      "get": {
+        "tags": ["contract_key_terms"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["contract_key_terms"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/contract_key_terms/{id}": {
+      "get": {
+        "tags": ["contract_key_terms"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["contract_key_terms"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["contract_key_terms"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/contract_pjbgs": {
+      "get": {
+        "tags": ["contract_pjbgs"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["contract_pjbgs"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/contract_pjbgs/{id}": {
+      "get": {
+        "tags": ["contract_pjbgs"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["contract_pjbgs"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["contract_pjbgs"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/offers": {
+      "get": {
+        "tags": ["offers"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["offers"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/offers/{id}": {
+      "get": {
+        "tags": ["offers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["offers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["offers"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/invoices": {
+      "get": {
+        "tags": ["invoices"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["invoices"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/invoices/{id}": {
+      "get": {
+        "tags": ["invoices"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["invoices"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["invoices"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/invoice_usages": {
+      "get": {
+        "tags": ["invoice_usages"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["invoice_usages"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/invoice_usages/{id}": {
+      "get": {
+        "tags": ["invoice_usages"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["invoice_usages"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["invoice_usages"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/deposits": {
+      "get": {
+        "tags": ["deposits"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["deposits"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/deposits/{id}": {
+      "get": {
+        "tags": ["deposits"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["deposits"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["deposits"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/expenses": {
+      "get": {
+        "tags": ["expenses"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["expenses"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/expenses/{id}": {
+      "get": {
+        "tags": ["expenses"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["expenses"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["expenses"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/petty_cashes": {
+      "get": {
+        "tags": ["petty_cashes"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["petty_cashes"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/petty_cashes/{id}": {
+      "get": {
+        "tags": ["petty_cashes"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["petty_cashes"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["petty_cashes"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/cash_advances": {
+      "get": {
+        "tags": ["cash_advances"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["cash_advances"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/cash_advances/{id}": {
+      "get": {
+        "tags": ["cash_advances"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["cash_advances"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["cash_advances"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+
+    "/v1/payrolls": {
+      "get": {
+        "tags": ["payrolls"],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "post": {
+        "tags": ["payrolls"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    },
+    "/v1/payrolls/{id}": {
+      "get": {
+        "tags": ["payrolls"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "put": {
+        "tags": ["payrolls"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/GenericRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      },
+      "delete": {
+        "tags": ["payrolls"],
+        "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/SuccessResponse" }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "IdPath": {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "responses": {
+      "SuccessResponse": {
+        "description": "Successful response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/GenericResponse"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "AuthSignupRequest": {
+        "type": "object",
+        "required": ["fullname", "email", "password", "confirmPassword"],
+        "properties": {
+          "fullname": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "password": { "type": "string" },
+          "confirmPassword": { "type": "string" }
+        }
+      },
+      "AuthSigninRequest": {
+        "type": "object",
+        "required": ["email", "password"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "password": { "type": "string" }
+        }
+      },
+      "GenericRequest": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "GenericResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": { "type": "integer" },
+          "message": { "type": "string" },
+          "data": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "meta": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
