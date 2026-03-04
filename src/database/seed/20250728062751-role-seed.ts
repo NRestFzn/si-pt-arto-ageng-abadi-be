@@ -28,8 +28,8 @@ export async function up(
 
       formData.push({
         ...item,
-        createdAt: new Date(),
-        updatedAt: new Date(),
+        created_at: new Date(),
+        updated_at: new Date(),
       })
     }
   }

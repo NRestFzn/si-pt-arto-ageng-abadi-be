@@ -2,7 +2,7 @@
 
 import { green } from 'colorette'
 import _ from 'lodash'
-import { DataTypes, QueryInterface, QueryTypes } from 'sequelize'
+import { DataTypes, QueryInterface } from 'sequelize'
 import { v4 as uuidv4 } from 'uuid'
 import { env } from '@/config/env.config'
 import Hashing from '@/config/hash.config'
@@ -47,9 +47,9 @@ export async function up(
         fullname: item.fullname,
         email: item.email,
         password: item.password,
-        RoleId: item.RoleId,
-        createdAt: new Date(),
-        updatedAt: new Date(),
+        role_id: item.RoleId,
+        created_at: new Date(),
+        updated_at: new Date(),
       })
     }
   }
