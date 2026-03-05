@@ -8,6 +8,12 @@
   "servers": [
     {
       "url": "http://localhost:3000"
+    },
+    {
+      "url": "https://vgq9k988-8000.asse.devtunnels.ms"
+    },
+    {
+      "url": "https://dipsy.chevalierlabsas.org"
     }
   ],
   "paths": {
@@ -207,15 +213,15 @@
       }
     },
 
-    "/v1/role_has_navigations": {
+    "/v1/role-has-navigations": {
       "get": {
-        "tags": ["role_has_navigations"],
+        "tags": ["role-has-navigations"],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "post": {
-        "tags": ["role_has_navigations"],
+        "tags": ["role-has-navigations"],
         "requestBody": {
           "required": true,
           "content": {
@@ -229,16 +235,16 @@
         }
       }
     },
-    "/v1/role_has_navigations/{id}": {
+    "/v1/role-has-navigations/{id}": {
       "get": {
-        "tags": ["role_has_navigations"],
+        "tags": ["role-has-navigations"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "put": {
-        "tags": ["role_has_navigations"],
+        "tags": ["role-has-navigations"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": true,
@@ -253,7 +259,7 @@
         }
       },
       "delete": {
-        "tags": ["role_has_navigations"],
+        "tags": ["role-has-navigations"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
@@ -261,15 +267,15 @@
       }
     },
 
-    "/v1/user_has_navigations": {
+    "/v1/user-has-navigations": {
       "get": {
-        "tags": ["user_has_navigations"],
+        "tags": ["user-has-navigations"],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "post": {
-        "tags": ["user_has_navigations"],
+        "tags": ["user-has-navigations"],
         "requestBody": {
           "required": true,
           "content": {
@@ -283,16 +289,16 @@
         }
       }
     },
-    "/v1/user_has_navigations/{id}": {
+    "/v1/user-has-navigations/{id}": {
       "get": {
-        "tags": ["user_has_navigations"],
+        "tags": ["user-has-navigations"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "put": {
-        "tags": ["user_has_navigations"],
+        "tags": ["user-has-navigations"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": true,
@@ -307,7 +313,7 @@
         }
       },
       "delete": {
-        "tags": ["user_has_navigations"],
+        "tags": ["user-has-navigations"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
@@ -585,15 +591,15 @@
       }
     },
 
-    "/v1/usage_delta_pressures": {
+    "/v1/usage-delta-pressures": {
       "get": {
-        "tags": ["usage_delta_pressures"],
+        "tags": ["usage-delta-pressures"],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "post": {
-        "tags": ["usage_delta_pressures"],
+        "tags": ["usage-delta-pressures"],
         "requestBody": {
           "required": true,
           "content": {
@@ -607,16 +613,16 @@
         }
       }
     },
-    "/v1/usage_delta_pressures/{id}": {
+    "/v1/usage-delta-pressures/{id}": {
       "get": {
-        "tags": ["usage_delta_pressures"],
+        "tags": ["usage-delta-pressures"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "put": {
-        "tags": ["usage_delta_pressures"],
+        "tags": ["usage-delta-pressures"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": true,
@@ -631,7 +637,7 @@
         }
       },
       "delete": {
-        "tags": ["usage_delta_pressures"],
+        "tags": ["usage-delta-pressures"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
@@ -639,15 +645,15 @@
       }
     },
 
-    "/v1/usage_evcs": {
+    "/v1/usage-evcs": {
       "get": {
-        "tags": ["usage_evcs"],
+        "tags": ["usage-evcs"],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "post": {
-        "tags": ["usage_evcs"],
+        "tags": ["usage-evcs"],
         "requestBody": {
           "required": true,
           "content": {
@@ -661,16 +667,16 @@
         }
       }
     },
-    "/v1/usage_evcs/{id}": {
+    "/v1/usage-evcs/{id}": {
       "get": {
-        "tags": ["usage_evcs"],
+        "tags": ["usage-evcs"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "put": {
-        "tags": ["usage_evcs"],
+        "tags": ["usage-evcs"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": true,
@@ -685,7 +691,7 @@
         }
       },
       "delete": {
-        "tags": ["usage_evcs"],
+        "tags": ["usage-evcs"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
@@ -693,15 +699,15 @@
       }
     },
 
-    "/v1/usage_turbines": {
+    "/v1/usage-turbines": {
       "get": {
-        "tags": ["usage_turbines"],
+        "tags": ["usage-turbines"],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "post": {
-        "tags": ["usage_turbines"],
+        "tags": ["usage-turbines"],
         "requestBody": {
           "required": true,
           "content": {
@@ -715,16 +721,16 @@
         }
       }
     },
-    "/v1/usage_turbines/{id}": {
+    "/v1/usage-turbines/{id}": {
       "get": {
-        "tags": ["usage_turbines"],
+        "tags": ["usage-turbines"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "put": {
-        "tags": ["usage_turbines"],
+        "tags": ["usage-turbines"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": true,
@@ -739,7 +745,7 @@
         }
       },
       "delete": {
-        "tags": ["usage_turbines"],
+        "tags": ["usage-turbines"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
@@ -747,15 +753,15 @@
       }
     },
 
-    "/v1/contract_key_terms": {
+    "/v1/contract-key-terms": {
       "get": {
-        "tags": ["contract_key_terms"],
+        "tags": ["contract-key-terms"],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "post": {
-        "tags": ["contract_key_terms"],
+        "tags": ["contract-key-terms"],
         "requestBody": {
           "required": true,
           "content": {
@@ -769,16 +775,16 @@
         }
       }
     },
-    "/v1/contract_key_terms/{id}": {
+    "/v1/contract-key-terms/{id}": {
       "get": {
-        "tags": ["contract_key_terms"],
+        "tags": ["contract-key-terms"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "put": {
-        "tags": ["contract_key_terms"],
+        "tags": ["contract-key-terms"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": true,
@@ -793,7 +799,7 @@
         }
       },
       "delete": {
-        "tags": ["contract_key_terms"],
+        "tags": ["contract-key-terms"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
@@ -801,15 +807,15 @@
       }
     },
 
-    "/v1/contract_pjbgs": {
+    "/v1/contract-pjbgs": {
       "get": {
-        "tags": ["contract_pjbgs"],
+        "tags": ["contract-pjbgs"],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "post": {
-        "tags": ["contract_pjbgs"],
+        "tags": ["contract-pjbgs"],
         "requestBody": {
           "required": true,
           "content": {
@@ -823,16 +829,16 @@
         }
       }
     },
-    "/v1/contract_pjbgs/{id}": {
+    "/v1/contract-pjbgs/{id}": {
       "get": {
-        "tags": ["contract_pjbgs"],
+        "tags": ["contract-pjbgs"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "put": {
-        "tags": ["contract_pjbgs"],
+        "tags": ["contract-pjbgs"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": true,
@@ -847,7 +853,7 @@
         }
       },
       "delete": {
-        "tags": ["contract_pjbgs"],
+        "tags": ["contract-pjbgs"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
@@ -963,15 +969,15 @@
       }
     },
 
-    "/v1/invoice_usages": {
+    "/v1/invoice-usages": {
       "get": {
-        "tags": ["invoice_usages"],
+        "tags": ["invoice-usages"],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "post": {
-        "tags": ["invoice_usages"],
+        "tags": ["invoice-usages"],
         "requestBody": {
           "required": true,
           "content": {
@@ -985,16 +991,16 @@
         }
       }
     },
-    "/v1/invoice_usages/{id}": {
+    "/v1/invoice-usages/{id}": {
       "get": {
-        "tags": ["invoice_usages"],
+        "tags": ["invoice-usages"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "put": {
-        "tags": ["invoice_usages"],
+        "tags": ["invoice-usages"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": true,
@@ -1009,7 +1015,7 @@
         }
       },
       "delete": {
-        "tags": ["invoice_usages"],
+        "tags": ["invoice-usages"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
@@ -1125,15 +1131,15 @@
       }
     },
 
-    "/v1/petty_cashes": {
+    "/v1/petty-cashes": {
       "get": {
-        "tags": ["petty_cashes"],
+        "tags": ["petty-cashes"],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "post": {
-        "tags": ["petty_cashes"],
+        "tags": ["petty-cashes"],
         "requestBody": {
           "required": true,
           "content": {
@@ -1147,16 +1153,16 @@
         }
       }
     },
-    "/v1/petty_cashes/{id}": {
+    "/v1/petty-cashes/{id}": {
       "get": {
-        "tags": ["petty_cashes"],
+        "tags": ["petty-cashes"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "put": {
-        "tags": ["petty_cashes"],
+        "tags": ["petty-cashes"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": true,
@@ -1171,7 +1177,7 @@
         }
       },
       "delete": {
-        "tags": ["petty_cashes"],
+        "tags": ["petty-cashes"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
@@ -1179,15 +1185,15 @@
       }
     },
 
-    "/v1/cash_advances": {
+    "/v1/cash-advances": {
       "get": {
-        "tags": ["cash_advances"],
+        "tags": ["cash-advances"],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "post": {
-        "tags": ["cash_advances"],
+        "tags": ["cash-advances"],
         "requestBody": {
           "required": true,
           "content": {
@@ -1201,16 +1207,16 @@
         }
       }
     },
-    "/v1/cash_advances/{id}": {
+    "/v1/cash-advances/{id}": {
       "get": {
-        "tags": ["cash_advances"],
+        "tags": ["cash-advances"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       },
       "put": {
-        "tags": ["cash_advances"],
+        "tags": ["cash-advances"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": true,
@@ -1225,16 +1231,16 @@
         }
       },
       "delete": {
-        "tags": ["cash_advances"],
+        "tags": ["cash-advances"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "responses": {
           "200": { "$ref": "#/components/responses/SuccessResponse" }
         }
       }
     },
-    "/v1/cash_advances/{id}/approve": {
+    "/v1/cash-advances/{id}/approve": {
       "post": {
-        "tags": ["cash_advances"],
+        "tags": ["cash-advances"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": false,
@@ -1251,9 +1257,9 @@
         }
       }
     },
-    "/v1/cash_advances/{id}/reject": {
+    "/v1/cash-advances/{id}/reject": {
       "post": {
-        "tags": ["cash_advances"],
+        "tags": ["cash-advances"],
         "parameters": [{ "$ref": "#/components/parameters/IdPath" }],
         "requestBody": {
           "required": true,
