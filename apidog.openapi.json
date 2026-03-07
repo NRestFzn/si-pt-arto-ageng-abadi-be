@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "SI API",
+    "title": "Sistem Informasi PT. Arto Ageng Abadi API",
     "version": "1.0.0",
     "description": "Apidog importable OpenAPI for auth/role/user and db.txt scaffolded modules"
   },
