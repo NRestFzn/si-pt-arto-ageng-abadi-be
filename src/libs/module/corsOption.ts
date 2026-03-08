@@ -1,11 +1,11 @@
 import { CorsOptions } from 'cors'
 
-export const allowedOrigins = [
+export const allowedOrigins: string[] = [
+  'http://localhost:3000',
   'http://localhost:5173',
   'https://abdimas-dipsy-fe.vercel.app',
-  'https://dipsy.chevalierlabsas.org',
+  'https://si-pt-arto-ageng-abadi.vercel.app',
 ]
-
 export const corsOptions: CorsOptions = {
   origin: (origin, callback) => {
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
