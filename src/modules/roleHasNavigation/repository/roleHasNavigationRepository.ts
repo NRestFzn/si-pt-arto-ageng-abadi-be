@@ -2,9 +2,9 @@ import { Request } from 'express'
 import { db } from '@/database/databaseConnection'
 import { ErrorResponse } from '@/libs/http/ErrorResponse'
 import RoleHasNavigation from '@/database/model/roleHasNavigation'
-import { BaseQueryRequest } from '@/routes/version1/request/_baseQueryRequest'
 import { MetaPaginationDto } from '@/routes/version1/response/metaData'
 import { CreateRoleHasNavigationDto, UpdateRoleHasNavigationDto } from '../dto'
+import { RoleHasNavigationQueryRepository } from './roleHasNavigationQueryRepository'
 
 export class RoleHasNavigationRepository {
   private parseCompositeId(id: string) {
@@ -17,20 +17,17 @@ export class RoleHasNavigationRepository {
     return { role_id, navigation_id }
   }
 
-  async getAll(
-    req: Request
-  ): Promise<{
+  async getAll(req: Request): Promise<{
     data: RoleHasNavigation[]
     meta: { pagination: MetaPaginationDto }
   }> {
-    const query = new BaseQueryRequest(req)
+    const query = new RoleHasNavigationQueryRepository(req)
+    const queryFilter = query.queryFilter()
 
-    const data = await RoleHasNavigation.findAll({
-      limit: query.limit,
-      offset: query.offset,
-      order: query.order,
+    const data = await RoleHasNavigation.findAll(queryFilter)
+    const dataCount = await RoleHasNavigation.count({
+      where: queryFilter.where,
     })
-    const dataCount = await RoleHasNavigation.count()
 
     return {
       data,

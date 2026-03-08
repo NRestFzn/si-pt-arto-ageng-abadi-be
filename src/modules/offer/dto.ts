@@ -34,3 +34,6 @@ export interface CreateOfferDto {
 }
 
 export type UpdateOfferDto = Partial<CreateOfferDto>
+
+
+export interface OfferQueryFilterDto extends Partial<CreateOfferDto> {}

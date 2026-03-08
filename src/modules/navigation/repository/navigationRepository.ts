@@ -1,6 +1,7 @@
 import Navigation from '@/database/model/navigation'
 import { CrudRepository } from '@/modules/_shared/crudRepository'
 import { CreateNavigationDto, UpdateNavigationDto } from '../dto'
+import { NavigationQueryRepository } from './navigationQueryRepository'
 
 export class NavigationRepository extends CrudRepository<
   Navigation,
@@ -8,6 +9,6 @@ export class NavigationRepository extends CrudRepository<
   UpdateNavigationDto
 > {
   constructor() {
-    super(Navigation)
+    super(Navigation, NavigationQueryRepository)
   }
 }

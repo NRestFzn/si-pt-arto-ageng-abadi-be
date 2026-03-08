@@ -1,6 +1,7 @@
 import UsageTurbine from '@/database/model/usageTurbine'
 import { CrudRepository } from '@/modules/_shared/crudRepository'
 import { CreateUsageTurbineDto, UpdateUsageTurbineDto } from '../dto'
+import { UsageTurbineQueryRepository } from './usageTurbineQueryRepository'
 
 export class UsageTurbineRepository extends CrudRepository<
   UsageTurbine,
@@ -8,6 +9,6 @@ export class UsageTurbineRepository extends CrudRepository<
   UpdateUsageTurbineDto
 > {
   constructor() {
-    super(UsageTurbine)
+    super(UsageTurbine, UsageTurbineQueryRepository)
   }
 }

@@ -14,3 +14,6 @@ export interface CreateInvoiceUsageDto {
 }
 
 export type UpdateInvoiceUsageDto = Partial<CreateInvoiceUsageDto>
+
+
+export interface InvoiceUsageQueryFilterDto extends Partial<CreateInvoiceUsageDto> {}

@@ -1,28 +1,47 @@
 import { Request } from 'express'
-import { Model, ModelStatic } from 'sequelize'
+import { FindOptions, Model, ModelStatic } from 'sequelize'
 import { db } from '@/database/databaseConnection'
 import { ErrorResponse } from '@/libs/http/ErrorResponse'
 import { BaseQueryRequest } from '@/routes/version1/request/_baseQueryRequest'
 import { MetaPaginationDto } from '@/routes/version1/response/metaData'
+
+type QueryRequestCtor = new (req: Request) => BaseQueryRequest & {
+  queryFilter?: () => FindOptions
+}
 
 export class CrudRepository<
   TModel extends Model,
   TCreate extends object,
   TUpdate extends object,
 > {
-  constructor(private readonly model: ModelStatic<TModel>) {}
+  constructor(
+    private readonly model: ModelStatic<TModel>,
+    private readonly queryRequestCtor?: QueryRequestCtor
+  ) {}
 
   async getAll(
     req: Request
   ): Promise<{ data: TModel[]; meta: { pagination: MetaPaginationDto } }> {
-    const query = new BaseQueryRequest(req)
+    const query = (
+      this.queryRequestCtor
+        ? new this.queryRequestCtor(req)
+        : new BaseQueryRequest(req)
+    ) as BaseQueryRequest & {
+      queryFilter?: () => FindOptions
+    }
 
-    const data = await this.model.findAll({
-      limit: query.limit,
-      offset: query.offset,
-      order: query.order,
-    })
-    const dataCount = await this.model.count()
+    const findOptions = query.queryFilter
+      ? query.queryFilter()
+      : {
+          limit: query.limit,
+          offset: query.offset,
+          order: query.order,
+        }
+
+    const data = await this.model.findAll(findOptions)
+    const dataCount = await this.model.count(
+      findOptions.where ? { where: findOptions.where } : undefined
+    )
 
     return {
       data,

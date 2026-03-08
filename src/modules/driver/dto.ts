@@ -14,3 +14,6 @@ export interface CreateDriverDto {
 }
 
 export type UpdateDriverDto = Partial<CreateDriverDto>
+
+
+export interface DriverQueryFilterDto extends Partial<CreateDriverDto> {}

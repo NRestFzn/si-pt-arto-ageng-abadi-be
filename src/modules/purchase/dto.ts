@@ -44,3 +44,6 @@ export interface CreatePurchaseDto {
 }
 
 export type UpdatePurchaseDto = Partial<CreatePurchaseDto>
+
+
+export interface PurchaseQueryFilterDto extends Partial<CreatePurchaseDto> {}

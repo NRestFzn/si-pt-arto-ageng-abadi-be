@@ -11,3 +11,5 @@ export interface CreateRoleHasNavigationDto {
 }
 
 export type UpdateRoleHasNavigationDto = Partial<CreateRoleHasNavigationDto>
+
+export interface RoleHasNavigationQueryFilterDto extends Partial<CreateRoleHasNavigationDto> {}

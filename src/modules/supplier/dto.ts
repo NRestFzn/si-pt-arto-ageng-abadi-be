@@ -18,3 +18,6 @@ export interface CreateSupplierDto {
 }
 
 export type UpdateSupplierDto = Partial<CreateSupplierDto>
+
+
+export interface SupplierQueryFilterDto extends Partial<CreateSupplierDto> {}

@@ -48,3 +48,6 @@ export interface CreateUsageTurbineDto {
 }
 
 export type UpdateUsageTurbineDto = Partial<CreateUsageTurbineDto>
+
+
+export interface UsageTurbineQueryFilterDto extends Partial<CreateUsageTurbineDto> {}

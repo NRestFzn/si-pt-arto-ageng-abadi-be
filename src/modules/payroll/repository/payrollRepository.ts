@@ -1,6 +1,7 @@
 import Payroll from '@/database/model/payroll'
 import { CrudRepository } from '@/modules/_shared/crudRepository'
 import { CreatePayrollDto, UpdatePayrollDto } from '../dto'
+import { PayrollQueryRepository } from './payrollQueryRepository'
 
 export class PayrollRepository extends CrudRepository<
   Payroll,
@@ -8,6 +9,6 @@ export class PayrollRepository extends CrudRepository<
   UpdatePayrollDto
 > {
   constructor() {
-    super(Payroll)
+    super(Payroll, PayrollQueryRepository)
   }
 }

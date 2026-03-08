@@ -16,3 +16,6 @@ export interface CreateDepositDto {
 }
 
 export type UpdateDepositDto = Partial<CreateDepositDto>
+
+
+export interface DepositQueryFilterDto extends Partial<CreateDepositDto> {}

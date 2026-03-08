@@ -30,3 +30,6 @@ export interface CreateInvoiceDto {
 }
 
 export type UpdateInvoiceDto = Partial<CreateInvoiceDto>
+
+
+export interface InvoiceQueryFilterDto extends Partial<CreateInvoiceDto> {}

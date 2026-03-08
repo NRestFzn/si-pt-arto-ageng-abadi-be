@@ -30,3 +30,6 @@ export interface CreatePayrollDto {
 }
 
 export type UpdatePayrollDto = Partial<CreatePayrollDto>
+
+
+export interface PayrollQueryFilterDto extends Partial<CreatePayrollDto> {}

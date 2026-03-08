@@ -24,3 +24,6 @@ export interface CreatePettyCashDto {
 }
 
 export type UpdatePettyCashDto = Partial<CreatePettyCashDto>
+
+
+export interface PettyCashQueryFilterDto extends Partial<CreatePettyCashDto> {}
