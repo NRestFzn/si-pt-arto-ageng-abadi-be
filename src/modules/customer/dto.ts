@@ -20,3 +20,6 @@ export interface CreateCustomerDto {
 }
 
 export type UpdateCustomerDto = Partial<CreateCustomerDto>
+
+
+export interface CustomerQueryFilterDto extends Partial<CreateCustomerDto> {}

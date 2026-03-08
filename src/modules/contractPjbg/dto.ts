@@ -14,3 +14,6 @@ export interface CreateContractPjbgDto {
 }
 
 export type UpdateContractPjbgDto = Partial<CreateContractPjbgDto>
+
+
+export interface ContractPjbgQueryFilterDto extends Partial<CreateContractPjbgDto> {}

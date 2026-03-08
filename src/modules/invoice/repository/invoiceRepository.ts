@@ -1,6 +1,7 @@
 import Invoice from '@/database/model/invoice'
 import { CrudRepository } from '@/modules/_shared/crudRepository'
 import { CreateInvoiceDto, UpdateInvoiceDto } from '../dto'
+import { InvoiceQueryRepository } from './invoiceQueryRepository'
 
 export class InvoiceRepository extends CrudRepository<
   Invoice,
@@ -8,6 +9,6 @@ export class InvoiceRepository extends CrudRepository<
   UpdateInvoiceDto
 > {
   constructor() {
-    super(Invoice)
+    super(Invoice, InvoiceQueryRepository)
   }
 }

@@ -24,3 +24,6 @@ export interface CreateContractKeyTermDto {
 }
 
 export type UpdateContractKeyTermDto = Partial<CreateContractKeyTermDto>
+
+
+export interface ContractKeyTermQueryFilterDto extends Partial<CreateContractKeyTermDto> {}

@@ -36,3 +36,6 @@ export interface CreateUsageEvcDto {
 }
 
 export type UpdateUsageEvcDto = Partial<CreateUsageEvcDto>
+
+
+export interface UsageEvcQueryFilterDto extends Partial<CreateUsageEvcDto> {}

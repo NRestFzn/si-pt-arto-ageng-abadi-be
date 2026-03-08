@@ -1,6 +1,7 @@
 import Purchase from '@/database/model/purchase'
 import { CrudRepository } from '@/modules/_shared/crudRepository'
 import { CreatePurchaseDto, UpdatePurchaseDto } from '../dto'
+import { PurchaseQueryRepository } from './purchaseQueryRepository'
 
 export class PurchaseRepository extends CrudRepository<
   Purchase,
@@ -8,6 +9,6 @@ export class PurchaseRepository extends CrudRepository<
   UpdatePurchaseDto
 > {
   constructor() {
-    super(Purchase)
+    super(Purchase, PurchaseQueryRepository)
   }
 }

@@ -12,3 +12,6 @@ export interface CreateNavigationDto {
 }
 
 export type UpdateNavigationDto = Partial<CreateNavigationDto>
+
+
+export interface NavigationQueryFilterDto extends Partial<CreateNavigationDto> {}

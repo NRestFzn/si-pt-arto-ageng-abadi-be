@@ -198,6 +198,12 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/NameQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PathQuery"
           }
         ],
         "responses": {
@@ -308,6 +314,12 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/RoleIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/NavigationIdQuery"
           }
         ],
         "responses": {
@@ -418,6 +430,12 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/UserIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/NavigationIdQuery"
           }
         ],
         "responses": {
@@ -528,6 +546,21 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CompanyNameQuery"
+          },
+          {
+            "$ref": "#/components/parameters/AddressQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PhoneNumberQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PicNameQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PicPhoneNumberQuery"
           }
         ],
         "responses": {
@@ -644,6 +677,15 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/NameQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PhoneNumberQuery"
+          },
+          {
+            "$ref": "#/components/parameters/NikQuery"
           }
         ],
         "responses": {
@@ -756,6 +798,24 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CompanyNameQuery"
+          },
+          {
+            "$ref": "#/components/parameters/NpwpQuery"
+          },
+          {
+            "$ref": "#/components/parameters/AddressQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PhoneNumberQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PicNameQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PicPhoneNumberQuery"
           }
         ],
         "responses": {
@@ -871,6 +931,12 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/NameQuery"
+          },
+          {
+            "$ref": "#/components/parameters/NikQuery"
           }
         ],
         "responses": {
@@ -981,6 +1047,60 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/SupplierIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DriverIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/LicensePlateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/GtmTypeQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DoNumberQuery"
+          },
+          {
+            "$ref": "#/components/parameters/GhcQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PressureStartQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PressureFinishQuery"
+          },
+          {
+            "$ref": "#/components/parameters/MeterStartQuery"
+          },
+          {
+            "$ref": "#/components/parameters/MeterFinishQuery"
+          },
+          {
+            "$ref": "#/components/parameters/MeteringFillPostQuery"
+          },
+          {
+            "$ref": "#/components/parameters/VolumeMmscfQuery"
+          },
+          {
+            "$ref": "#/components/parameters/VolumeMmbtuQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CurrencyQuery"
+          },
+          {
+            "$ref": "#/components/parameters/ExchangeRateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PricePerSm3Query"
+          },
+          {
+            "$ref": "#/components/parameters/TotalSalesQuery"
           }
         ],
         "responses": {
@@ -1108,6 +1228,60 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CustomerIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/LicensePlateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/GtmTypeQuery"
+          },
+          {
+            "$ref": "#/components/parameters/LwcQuery"
+          },
+          {
+            "$ref": "#/components/parameters/VolNm3At200BarGQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PressureStartQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PressureFinishQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PressureDifferenceQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TotalSm3Query"
+          },
+          {
+            "$ref": "#/components/parameters/GhvQuery"
+          },
+          {
+            "$ref": "#/components/parameters/Standard1Sm3Query"
+          },
+          {
+            "$ref": "#/components/parameters/MmbtuQuery"
+          },
+          {
+            "$ref": "#/components/parameters/MmbtuPerSm3Query"
+          },
+          {
+            "$ref": "#/components/parameters/CurrencyQuery"
+          },
+          {
+            "$ref": "#/components/parameters/ExchangeRateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PricePerSm3Query"
+          },
+          {
+            "$ref": "#/components/parameters/TotalSalesQuery"
           }
         ],
         "responses": {
@@ -1227,6 +1401,48 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CustomerIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/LicensePlateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/GtmNumberQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TurbineStartQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TurbineFinishQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TurbineDifferenceQuery"
+          },
+          {
+            "$ref": "#/components/parameters/EvcStartQuery"
+          },
+          {
+            "$ref": "#/components/parameters/EvcFinishQuery"
+          },
+          {
+            "$ref": "#/components/parameters/EvcDifferenceSm3Query"
+          },
+          {
+            "$ref": "#/components/parameters/CurrencyQuery"
+          },
+          {
+            "$ref": "#/components/parameters/ExchangeRateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PricePerSm3Query"
+          },
+          {
+            "$ref": "#/components/parameters/TotalSalesQuery"
           }
         ],
         "responses": {
@@ -1348,6 +1564,66 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CustomerIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/GtmNumberQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TurbineStartQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TurbineFinishQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TurbineDifferenceQuery"
+          },
+          {
+            "$ref": "#/components/parameters/SupplyPressureQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TempAvgPrsQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CompressionFactorQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TempBaseQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PressureStandardQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PressureAtmStandardQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TotalSm3Query"
+          },
+          {
+            "$ref": "#/components/parameters/GhvQuery"
+          },
+          {
+            "$ref": "#/components/parameters/Standard1Sm3Query"
+          },
+          {
+            "$ref": "#/components/parameters/MmbtuQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CurrencyQuery"
+          },
+          {
+            "$ref": "#/components/parameters/ExchangeRateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PricePerSm3Query"
+          },
+          {
+            "$ref": "#/components/parameters/TotalSalesQuery"
           }
         ],
         "responses": {
@@ -1468,6 +1744,30 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CustomerIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/OfferNumberQuery"
+          },
+          {
+            "$ref": "#/components/parameters/OfferDateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/VolumeQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DurationQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PriceTypeQuery"
+          },
+          {
+            "$ref": "#/components/parameters/MoqQuery"
+          },
+          {
+            "$ref": "#/components/parameters/BillingTypeQuery"
           }
         ],
         "responses": {
@@ -1585,6 +1885,15 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CustomerIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/ContractNumberQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DurationQuery"
           }
         ],
         "responses": {
@@ -1696,6 +2005,45 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CustomerIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/OfferNumberQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/ImplementationQuery"
+          },
+          {
+            "$ref": "#/components/parameters/MonthlyCngUsageVolumeQuery"
+          },
+          {
+            "$ref": "#/components/parameters/StandardGhvSpecificationQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CngMotherStationLocationQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CngGasPricePerSm3Query"
+          },
+          {
+            "$ref": "#/components/parameters/PaymentMethodQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PriceIncludesQuery"
+          },
+          {
+            "$ref": "#/components/parameters/ContractPeriodQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PreparationTimeQuery"
+          },
+          {
+            "$ref": "#/components/parameters/ValidityQuery"
           }
         ],
         "responses": {
@@ -1812,6 +2160,39 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CustomerIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/InvoiceNumberQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PoNumberQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PoDateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PeriodStartQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PeriodEndQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TotalUsageQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DepositDeductionQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TotalBillQuery"
+          },
+          {
+            "$ref": "#/components/parameters/NoteQuery"
           }
         ],
         "responses": {
@@ -1933,6 +2314,15 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/InvoiceIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/UsageTypeQuery"
+          },
+          {
+            "$ref": "#/components/parameters/UsageIdQuery"
           }
         ],
         "responses": {
@@ -2044,6 +2434,18 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CustomerIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/AmountQuery"
+          },
+          {
+            "$ref": "#/components/parameters/ChartOfAccountQuery"
           }
         ],
         "responses": {
@@ -2156,6 +2558,36 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CustomerIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/ExpenseTypeQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DescriptionQuery"
+          },
+          {
+            "$ref": "#/components/parameters/QuantityQuery"
+          },
+          {
+            "$ref": "#/components/parameters/UnitPriceQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TotalQuery"
+          },
+          {
+            "$ref": "#/components/parameters/AccountQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PaymentMethodQuery"
+          },
+          {
+            "$ref": "#/components/parameters/BankAccountQuery"
           }
         ],
         "responses": {
@@ -2274,6 +2706,30 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/CustomerIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/ExpenseTypeQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DescriptionQuery"
+          },
+          {
+            "$ref": "#/components/parameters/QuantityQuery"
+          },
+          {
+            "$ref": "#/components/parameters/UnitPriceQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TotalQuery"
+          },
+          {
+            "$ref": "#/components/parameters/TransactionTypeQuery"
           }
         ],
         "responses": {
@@ -2390,6 +2846,21 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/EmployeeIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DateQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DescriptionQuery"
+          },
+          {
+            "$ref": "#/components/parameters/AmountQuery"
+          },
+          {
+            "$ref": "#/components/parameters/MonthlyDeductionQuery"
           }
         ],
         "responses": {
@@ -2566,6 +3037,39 @@
           },
           {
             "$ref": "#/components/parameters/OrderQuery"
+          },
+          {
+            "$ref": "#/components/parameters/EmployeeIdQuery"
+          },
+          {
+            "$ref": "#/components/parameters/PeriodQuery"
+          },
+          {
+            "$ref": "#/components/parameters/BasicSalaryQuery"
+          },
+          {
+            "$ref": "#/components/parameters/AllowanceQuery"
+          },
+          {
+            "$ref": "#/components/parameters/OvertimeQuery"
+          },
+          {
+            "$ref": "#/components/parameters/IncentiveBonusQuery"
+          },
+          {
+            "$ref": "#/components/parameters/OthersIncomeQuery"
+          },
+          {
+            "$ref": "#/components/parameters/Pph21Query"
+          },
+          {
+            "$ref": "#/components/parameters/BpjsQuery"
+          },
+          {
+            "$ref": "#/components/parameters/DebtDeductionQuery"
+          },
+          {
+            "$ref": "#/components/parameters/OthersDeductionQuery"
           }
         ],
         "responses": {
@@ -3283,6 +3787,929 @@
           "maximum": 9999,
           "example": 2025
         }
+      },
+      "PathQuery": {
+        "name": "path",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by path"
+      },
+      "RoleIdQuery": {
+        "name": "role_id",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by role_id"
+      },
+      "NavigationIdQuery": {
+        "name": "navigation_id",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by navigation_id"
+      },
+      "UserIdQuery": {
+        "name": "user_id",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by user_id"
+      },
+      "CompanyNameQuery": {
+        "name": "company_name",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by company_name"
+      },
+      "AddressQuery": {
+        "name": "address",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by address"
+      },
+      "PhoneNumberQuery": {
+        "name": "phone_number",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by phone_number"
+      },
+      "PicNameQuery": {
+        "name": "pic_name",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by pic_name"
+      },
+      "PicPhoneNumberQuery": {
+        "name": "pic_phone_number",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by pic_phone_number"
+      },
+      "NikQuery": {
+        "name": "nik",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by nik"
+      },
+      "NpwpQuery": {
+        "name": "npwp",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by npwp"
+      },
+      "DateQuery": {
+        "name": "date",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "format": "date"
+        },
+        "description": "Filter by date"
+      },
+      "SupplierIdQuery": {
+        "name": "supplier_id",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by supplier_id"
+      },
+      "DriverIdQuery": {
+        "name": "driver_id",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by driver_id"
+      },
+      "LicensePlateQuery": {
+        "name": "license_plate",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by license_plate"
+      },
+      "GtmTypeQuery": {
+        "name": "gtm_type",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by gtm_type"
+      },
+      "DoNumberQuery": {
+        "name": "do_number",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by do_number"
+      },
+      "GhcQuery": {
+        "name": "ghc",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by ghc"
+      },
+      "PressureStartQuery": {
+        "name": "pressure_start",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by pressure_start"
+      },
+      "PressureFinishQuery": {
+        "name": "pressure_finish",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by pressure_finish"
+      },
+      "MeterStartQuery": {
+        "name": "meter_start",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by meter_start"
+      },
+      "MeterFinishQuery": {
+        "name": "meter_finish",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by meter_finish"
+      },
+      "MeteringFillPostQuery": {
+        "name": "metering_fill_post",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by metering_fill_post"
+      },
+      "VolumeMmscfQuery": {
+        "name": "volume_mmscf",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by volume_mmscf"
+      },
+      "VolumeMmbtuQuery": {
+        "name": "volume_mmbtu",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by volume_mmbtu"
+      },
+      "CurrencyQuery": {
+        "name": "currency",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by currency"
+      },
+      "ExchangeRateQuery": {
+        "name": "exchange_rate",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by exchange_rate"
+      },
+      "PricePerSm3Query": {
+        "name": "price_per_sm3",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by price_per_sm3"
+      },
+      "TotalSalesQuery": {
+        "name": "total_sales",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by total_sales"
+      },
+      "CustomerIdQuery": {
+        "name": "customer_id",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by customer_id"
+      },
+      "LwcQuery": {
+        "name": "lwc",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by lwc"
+      },
+      "VolNm3At200BarGQuery": {
+        "name": "vol_nm3_at_200_bar_g",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by vol_nm3_at_200_bar_g"
+      },
+      "PressureDifferenceQuery": {
+        "name": "pressure_difference",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by pressure_difference"
+      },
+      "TotalSm3Query": {
+        "name": "total_sm3",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by total_sm3"
+      },
+      "GhvQuery": {
+        "name": "ghv",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by ghv"
+      },
+      "Standard1Sm3Query": {
+        "name": "standard_1_sm3",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by standard_1_sm3"
+      },
+      "MmbtuQuery": {
+        "name": "mmbtu",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by mmbtu"
+      },
+      "MmbtuPerSm3Query": {
+        "name": "mmbtu_per_sm3",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by mmbtu_per_sm3"
+      },
+      "GtmNumberQuery": {
+        "name": "gtm_number",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by gtm_number"
+      },
+      "TurbineStartQuery": {
+        "name": "turbine_start",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by turbine_start"
+      },
+      "TurbineFinishQuery": {
+        "name": "turbine_finish",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by turbine_finish"
+      },
+      "TurbineDifferenceQuery": {
+        "name": "turbine_difference",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by turbine_difference"
+      },
+      "EvcStartQuery": {
+        "name": "evc_start",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by evc_start"
+      },
+      "EvcFinishQuery": {
+        "name": "evc_finish",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by evc_finish"
+      },
+      "EvcDifferenceSm3Query": {
+        "name": "evc_difference_sm3",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by evc_difference_sm3"
+      },
+      "SupplyPressureQuery": {
+        "name": "supply_pressure",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by supply_pressure"
+      },
+      "TempAvgPrsQuery": {
+        "name": "temp_avg_prs",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by temp_avg_prs"
+      },
+      "CompressionFactorQuery": {
+        "name": "compression_factor",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by compression_factor"
+      },
+      "TempBaseQuery": {
+        "name": "temp_base",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by temp_base"
+      },
+      "PressureStandardQuery": {
+        "name": "pressure_standard",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by pressure_standard"
+      },
+      "PressureAtmStandardQuery": {
+        "name": "pressure_atm_standard",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by pressure_atm_standard"
+      },
+      "OfferNumberQuery": {
+        "name": "offer_number",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by offer_number"
+      },
+      "OfferDateQuery": {
+        "name": "offer_date",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "format": "date"
+        },
+        "description": "Filter by offer_date"
+      },
+      "VolumeQuery": {
+        "name": "volume",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by volume"
+      },
+      "DurationQuery": {
+        "name": "duration",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by duration"
+      },
+      "PriceTypeQuery": {
+        "name": "price_type",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by price_type"
+      },
+      "MoqQuery": {
+        "name": "moq",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by moq"
+      },
+      "BillingTypeQuery": {
+        "name": "billing_type",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by billing_type"
+      },
+      "ContractNumberQuery": {
+        "name": "contract_number",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by contract_number"
+      },
+      "ImplementationQuery": {
+        "name": "implementation",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by implementation"
+      },
+      "MonthlyCngUsageVolumeQuery": {
+        "name": "monthly_cng_usage_volume",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by monthly_cng_usage_volume"
+      },
+      "StandardGhvSpecificationQuery": {
+        "name": "standard_ghv_specification",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by standard_ghv_specification"
+      },
+      "CngMotherStationLocationQuery": {
+        "name": "cng_mother_station_location",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by cng_mother_station_location"
+      },
+      "CngGasPricePerSm3Query": {
+        "name": "cng_gas_price_per_sm3",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by cng_gas_price_per_sm3"
+      },
+      "PaymentMethodQuery": {
+        "name": "payment_method",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by payment_method"
+      },
+      "PriceIncludesQuery": {
+        "name": "price_includes",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by price_includes"
+      },
+      "ContractPeriodQuery": {
+        "name": "contract_period",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by contract_period"
+      },
+      "PreparationTimeQuery": {
+        "name": "preparation_time",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by preparation_time"
+      },
+      "ValidityQuery": {
+        "name": "validity",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by validity"
+      },
+      "InvoiceNumberQuery": {
+        "name": "invoice_number",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by invoice_number"
+      },
+      "PoNumberQuery": {
+        "name": "po_number",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by po_number"
+      },
+      "PoDateQuery": {
+        "name": "po_date",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "format": "date"
+        },
+        "description": "Filter by po_date"
+      },
+      "PeriodStartQuery": {
+        "name": "period_start",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "format": "date"
+        },
+        "description": "Filter by period_start"
+      },
+      "PeriodEndQuery": {
+        "name": "period_end",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "format": "date"
+        },
+        "description": "Filter by period_end"
+      },
+      "TotalUsageQuery": {
+        "name": "total_usage",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by total_usage"
+      },
+      "DepositDeductionQuery": {
+        "name": "deposit_deduction",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by deposit_deduction"
+      },
+      "TotalBillQuery": {
+        "name": "total_bill",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by total_bill"
+      },
+      "NoteQuery": {
+        "name": "note",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by note"
+      },
+      "InvoiceIdQuery": {
+        "name": "invoice_id",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by invoice_id"
+      },
+      "UsageTypeQuery": {
+        "name": "usage_type",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by usage_type"
+      },
+      "UsageIdQuery": {
+        "name": "usage_id",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by usage_id"
+      },
+      "AmountQuery": {
+        "name": "amount",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by amount"
+      },
+      "ChartOfAccountQuery": {
+        "name": "chart_of_account",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by chart_of_account"
+      },
+      "ExpenseTypeQuery": {
+        "name": "expense_type",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by expense_type"
+      },
+      "QuantityQuery": {
+        "name": "quantity",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by quantity"
+      },
+      "UnitPriceQuery": {
+        "name": "unit_price",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by unit_price"
+      },
+      "TotalQuery": {
+        "name": "total",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by total"
+      },
+      "AccountQuery": {
+        "name": "account",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by account"
+      },
+      "BankAccountQuery": {
+        "name": "bank_account",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by bank_account"
+      },
+      "TransactionTypeQuery": {
+        "name": "transaction_type",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by transaction_type"
+      },
+      "EmployeeIdQuery": {
+        "name": "employee_id",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by employee_id"
+      },
+      "MonthlyDeductionQuery": {
+        "name": "monthly_deduction",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by monthly_deduction"
+      },
+      "PeriodQuery": {
+        "name": "period",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by period"
+      },
+      "BasicSalaryQuery": {
+        "name": "basic_salary",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by basic_salary"
+      },
+      "AllowanceQuery": {
+        "name": "allowance",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by allowance"
+      },
+      "OvertimeQuery": {
+        "name": "overtime",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by overtime"
+      },
+      "IncentiveBonusQuery": {
+        "name": "incentive_bonus",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by incentive_bonus"
+      },
+      "OthersIncomeQuery": {
+        "name": "others_income",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by others_income"
+      },
+      "Pph21Query": {
+        "name": "pph21",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by pph21"
+      },
+      "BpjsQuery": {
+        "name": "bpjs",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by bpjs"
+      },
+      "DebtDeductionQuery": {
+        "name": "debt_deduction",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by debt_deduction"
+      },
+      "OthersDeductionQuery": {
+        "name": "others_deduction",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Filter by others_deduction"
       }
     },
     "responses": {

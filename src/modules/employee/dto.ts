@@ -12,3 +12,6 @@ export interface CreateEmployeeDto {
 }
 
 export type UpdateEmployeeDto = Partial<CreateEmployeeDto>
+
+
+export interface EmployeeQueryFilterDto extends Partial<CreateEmployeeDto> {}

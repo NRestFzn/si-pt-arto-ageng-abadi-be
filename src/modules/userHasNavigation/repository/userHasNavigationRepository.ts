@@ -2,9 +2,9 @@ import { Request } from 'express'
 import { db } from '@/database/databaseConnection'
 import { ErrorResponse } from '@/libs/http/ErrorResponse'
 import UserHasNavigation from '@/database/model/userHasNavigation'
-import { BaseQueryRequest } from '@/routes/version1/request/_baseQueryRequest'
 import { MetaPaginationDto } from '@/routes/version1/response/metaData'
 import { CreateUserHasNavigationDto, UpdateUserHasNavigationDto } from '../dto'
+import { UserHasNavigationQueryRepository } from './userHasNavigationQueryRepository'
 
 export class UserHasNavigationRepository {
   private parseCompositeId(id: string) {
@@ -17,20 +17,17 @@ export class UserHasNavigationRepository {
     return { user_id, navigation_id }
   }
 
-  async getAll(
-    req: Request
-  ): Promise<{
+  async getAll(req: Request): Promise<{
     data: UserHasNavigation[]
     meta: { pagination: MetaPaginationDto }
   }> {
-    const query = new BaseQueryRequest(req)
+    const query = new UserHasNavigationQueryRepository(req)
+    const queryFilter = query.queryFilter()
 
-    const data = await UserHasNavigation.findAll({
-      limit: query.limit,
-      offset: query.offset,
-      order: query.order,
+    const data = await UserHasNavigation.findAll(queryFilter)
+    const dataCount = await UserHasNavigation.count({
+      where: queryFilter.where,
     })
-    const dataCount = await UserHasNavigation.count()
 
     return {
       data,

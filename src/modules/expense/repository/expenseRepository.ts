@@ -1,6 +1,7 @@
 import Expense from '@/database/model/expense'
 import { CrudRepository } from '@/modules/_shared/crudRepository'
 import { CreateExpenseDto, UpdateExpenseDto } from '../dto'
+import { ExpenseQueryRepository } from './expenseQueryRepository'
 
 export class ExpenseRepository extends CrudRepository<
   Expense,
@@ -8,6 +9,6 @@ export class ExpenseRepository extends CrudRepository<
   UpdateExpenseDto
 > {
   constructor() {
-    super(Expense)
+    super(Expense, ExpenseQueryRepository)
   }
 }

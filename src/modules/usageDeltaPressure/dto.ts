@@ -44,3 +44,6 @@ export interface CreateUsageDeltaPressureDto {
 }
 
 export type UpdateUsageDeltaPressureDto = Partial<CreateUsageDeltaPressureDto>
+
+
+export interface UsageDeltaPressureQueryFilterDto extends Partial<CreateUsageDeltaPressureDto> {}

@@ -1,5 +1,6 @@
 import UsageDeltaPressure from '@/database/model/usageDeltaPressure'
 import { CrudRepository } from '@/modules/_shared/crudRepository'
+import { UsageDeltaPressureQueryRepository } from './usageDeltaPressureQueryRepository'
 import {
   CreateUsageDeltaPressureDto,
   UpdateUsageDeltaPressureDto,
@@ -11,6 +12,6 @@ export class UsageDeltaPressureRepository extends CrudRepository<
   UpdateUsageDeltaPressureDto
 > {
   constructor() {
-    super(UsageDeltaPressure)
+    super(UsageDeltaPressure, UsageDeltaPressureQueryRepository)
   }
 }

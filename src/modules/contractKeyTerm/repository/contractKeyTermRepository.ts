@@ -1,6 +1,7 @@
 import ContractKeyTerm from '@/database/model/contractKeyTerm'
 import { CrudRepository } from '@/modules/_shared/crudRepository'
 import { CreateContractKeyTermDto, UpdateContractKeyTermDto } from '../dto'
+import { ContractKeyTermQueryRepository } from './contractKeyTermQueryRepository'
 
 export class ContractKeyTermRepository extends CrudRepository<
   ContractKeyTerm,
@@ -8,6 +9,6 @@ export class ContractKeyTermRepository extends CrudRepository<
   UpdateContractKeyTermDto
 > {
   constructor() {
-    super(ContractKeyTerm)
+    super(ContractKeyTerm, ContractKeyTermQueryRepository)
   }
 }

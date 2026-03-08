@@ -1,6 +1,7 @@
 import UsageEvc from '@/database/model/usageEvc'
 import { CrudRepository } from '@/modules/_shared/crudRepository'
 import { CreateUsageEvcDto, UpdateUsageEvcDto } from '../dto'
+import { UsageEvcQueryRepository } from './usageEvcQueryRepository'
 
 export class UsageEvcRepository extends CrudRepository<
   UsageEvc,
@@ -8,6 +9,6 @@ export class UsageEvcRepository extends CrudRepository<
   UpdateUsageEvcDto
 > {
   constructor() {
-    super(UsageEvc)
+    super(UsageEvc, UsageEvcQueryRepository)
   }
 }

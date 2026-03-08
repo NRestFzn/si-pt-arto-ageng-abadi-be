@@ -28,3 +28,6 @@ export interface CreateExpenseDto {
 }
 
 export type UpdateExpenseDto = Partial<CreateExpenseDto>
+
+
+export interface ExpenseQueryFilterDto extends Partial<CreateExpenseDto> {}

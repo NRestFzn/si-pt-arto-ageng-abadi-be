@@ -26,3 +26,6 @@ export interface ApproveCashAdvanceDto {
 export interface RejectCashAdvanceDto {
   reason: string
 }
+
+
+export interface CashAdvanceQueryFilterDto extends Partial<CreateCashAdvanceDto> {}
