@@ -3,7 +3,7 @@ import * as yup from 'yup'
 export const createAccountingCoASchema = yup.object({
   code: yup.string().required('validation.required'),
   name: yup.string().required('validation.required'),
-  initialbalance: yup
+  initialBalance: yup
     .number()
     .required('validation.required')
     .min(0, 'validation.min'),
@@ -13,7 +13,7 @@ export const createAccountingCoASchema = yup.object({
 export const updateAccountingCoASchema = yup.object({
   code: yup.string().required('validation.required'),
   name: yup.string().required('validation.required'),
-  initialbalance: yup
+  initialBalance: yup
     .number()
     .required('validation.required')
     .min(0, 'validation.min'),

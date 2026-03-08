@@ -19,9 +19,7 @@
   "paths": {
     "/v1/auth/signup": {
       "post": {
-        "tags": [
-          "auth"
-        ],
+        "tags": ["auth"],
         "requestBody": {
           "required": true,
           "content": {
@@ -48,9 +46,7 @@
     },
     "/v1/auth/signin": {
       "post": {
-        "tags": [
-          "auth"
-        ],
+        "tags": ["auth"],
         "requestBody": {
           "required": true,
           "content": {
@@ -75,9 +71,7 @@
     },
     "/v1/role": {
       "get": {
-        "tags": [
-          "role"
-        ],
+        "tags": ["role"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -99,9 +93,7 @@
         }
       },
       "post": {
-        "tags": [
-          "role"
-        ],
+        "tags": ["role"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -125,9 +117,7 @@
     },
     "/v1/role/{id}": {
       "get": {
-        "tags": [
-          "role"
-        ],
+        "tags": ["role"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -140,9 +130,7 @@
         }
       },
       "put": {
-        "tags": [
-          "role"
-        ],
+        "tags": ["role"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -169,9 +157,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "role"
-        ],
+        "tags": ["role"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -186,9 +172,7 @@
     },
     "/v1/navigations": {
       "get": {
-        "tags": [
-          "navigations"
-        ],
+        "tags": ["navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -213,9 +197,7 @@
         }
       },
       "post": {
-        "tags": [
-          "navigations"
-        ],
+        "tags": ["navigations"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -240,9 +222,7 @@
     },
     "/v1/navigations/{id}": {
       "get": {
-        "tags": [
-          "navigations"
-        ],
+        "tags": ["navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -255,9 +235,7 @@
         }
       },
       "put": {
-        "tags": [
-          "navigations"
-        ],
+        "tags": ["navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -285,9 +263,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "navigations"
-        ],
+        "tags": ["navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -302,9 +278,7 @@
     },
     "/v1/role-has-navigations": {
       "get": {
-        "tags": [
-          "role-has-navigations"
-        ],
+        "tags": ["role-has-navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -329,9 +303,7 @@
         }
       },
       "post": {
-        "tags": [
-          "role-has-navigations"
-        ],
+        "tags": ["role-has-navigations"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -356,9 +328,7 @@
     },
     "/v1/role-has-navigations/{id}": {
       "get": {
-        "tags": [
-          "role-has-navigations"
-        ],
+        "tags": ["role-has-navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -371,9 +341,7 @@
         }
       },
       "put": {
-        "tags": [
-          "role-has-navigations"
-        ],
+        "tags": ["role-has-navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -401,9 +369,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "role-has-navigations"
-        ],
+        "tags": ["role-has-navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -418,9 +384,7 @@
     },
     "/v1/user-has-navigations": {
       "get": {
-        "tags": [
-          "user-has-navigations"
-        ],
+        "tags": ["user-has-navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -445,9 +409,7 @@
         }
       },
       "post": {
-        "tags": [
-          "user-has-navigations"
-        ],
+        "tags": ["user-has-navigations"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -472,9 +434,7 @@
     },
     "/v1/user-has-navigations/{id}": {
       "get": {
-        "tags": [
-          "user-has-navigations"
-        ],
+        "tags": ["user-has-navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -487,9 +447,7 @@
         }
       },
       "put": {
-        "tags": [
-          "user-has-navigations"
-        ],
+        "tags": ["user-has-navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -517,9 +475,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "user-has-navigations"
-        ],
+        "tags": ["user-has-navigations"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -534,9 +490,7 @@
     },
     "/v1/suppliers": {
       "get": {
-        "tags": [
-          "suppliers"
-        ],
+        "tags": ["suppliers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -570,9 +524,7 @@
         }
       },
       "post": {
-        "tags": [
-          "suppliers"
-        ],
+        "tags": ["suppliers"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -600,9 +552,7 @@
     },
     "/v1/suppliers/{id}": {
       "get": {
-        "tags": [
-          "suppliers"
-        ],
+        "tags": ["suppliers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -615,9 +565,7 @@
         }
       },
       "put": {
-        "tags": [
-          "suppliers"
-        ],
+        "tags": ["suppliers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -648,9 +596,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "suppliers"
-        ],
+        "tags": ["suppliers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -665,9 +611,7 @@
     },
     "/v1/drivers": {
       "get": {
-        "tags": [
-          "drivers"
-        ],
+        "tags": ["drivers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -695,9 +639,7 @@
         }
       },
       "post": {
-        "tags": [
-          "drivers"
-        ],
+        "tags": ["drivers"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -723,9 +665,7 @@
     },
     "/v1/drivers/{id}": {
       "get": {
-        "tags": [
-          "drivers"
-        ],
+        "tags": ["drivers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -738,9 +678,7 @@
         }
       },
       "put": {
-        "tags": [
-          "drivers"
-        ],
+        "tags": ["drivers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -769,9 +707,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "drivers"
-        ],
+        "tags": ["drivers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -786,9 +722,7 @@
     },
     "/v1/customers": {
       "get": {
-        "tags": [
-          "customers"
-        ],
+        "tags": ["customers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -825,9 +759,7 @@
         }
       },
       "post": {
-        "tags": [
-          "customers"
-        ],
+        "tags": ["customers"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -856,9 +788,7 @@
     },
     "/v1/customers/{id}": {
       "get": {
-        "tags": [
-          "customers"
-        ],
+        "tags": ["customers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -871,9 +801,7 @@
         }
       },
       "put": {
-        "tags": [
-          "customers"
-        ],
+        "tags": ["customers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -902,9 +830,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "customers"
-        ],
+        "tags": ["customers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -919,9 +845,7 @@
     },
     "/v1/employees": {
       "get": {
-        "tags": [
-          "employees"
-        ],
+        "tags": ["employees"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -946,9 +870,7 @@
         }
       },
       "post": {
-        "tags": [
-          "employees"
-        ],
+        "tags": ["employees"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -973,9 +895,7 @@
     },
     "/v1/employees/{id}": {
       "get": {
-        "tags": [
-          "employees"
-        ],
+        "tags": ["employees"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -988,9 +908,7 @@
         }
       },
       "put": {
-        "tags": [
-          "employees"
-        ],
+        "tags": ["employees"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1018,9 +936,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "employees"
-        ],
+        "tags": ["employees"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1035,9 +951,7 @@
     },
     "/v1/purchases": {
       "get": {
-        "tags": [
-          "purchases"
-        ],
+        "tags": ["purchases"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -1110,9 +1024,7 @@
         }
       },
       "post": {
-        "tags": [
-          "purchases"
-        ],
+        "tags": ["purchases"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -1152,9 +1064,7 @@
     },
     "/v1/purchases/{id}": {
       "get": {
-        "tags": [
-          "purchases"
-        ],
+        "tags": ["purchases"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1167,9 +1077,7 @@
         }
       },
       "put": {
-        "tags": [
-          "purchases"
-        ],
+        "tags": ["purchases"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1199,9 +1107,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "purchases"
-        ],
+        "tags": ["purchases"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1216,9 +1122,7 @@
     },
     "/v1/usage-delta-pressures": {
       "get": {
-        "tags": [
-          "usage-delta-pressures"
-        ],
+        "tags": ["usage-delta-pressures"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -1291,9 +1195,7 @@
         }
       },
       "post": {
-        "tags": [
-          "usage-delta-pressures"
-        ],
+        "tags": ["usage-delta-pressures"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -1325,9 +1227,7 @@
     },
     "/v1/usage-delta-pressures/{id}": {
       "get": {
-        "tags": [
-          "usage-delta-pressures"
-        ],
+        "tags": ["usage-delta-pressures"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1340,9 +1240,7 @@
         }
       },
       "put": {
-        "tags": [
-          "usage-delta-pressures"
-        ],
+        "tags": ["usage-delta-pressures"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1372,9 +1270,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "usage-delta-pressures"
-        ],
+        "tags": ["usage-delta-pressures"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1389,9 +1285,7 @@
     },
     "/v1/usage-evcs": {
       "get": {
-        "tags": [
-          "usage-evcs"
-        ],
+        "tags": ["usage-evcs"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -1452,9 +1346,7 @@
         }
       },
       "post": {
-        "tags": [
-          "usage-evcs"
-        ],
+        "tags": ["usage-evcs"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -1487,9 +1379,7 @@
     },
     "/v1/usage-evcs/{id}": {
       "get": {
-        "tags": [
-          "usage-evcs"
-        ],
+        "tags": ["usage-evcs"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1502,9 +1392,7 @@
         }
       },
       "put": {
-        "tags": [
-          "usage-evcs"
-        ],
+        "tags": ["usage-evcs"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1535,9 +1423,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "usage-evcs"
-        ],
+        "tags": ["usage-evcs"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1552,9 +1438,7 @@
     },
     "/v1/usage-turbines": {
       "get": {
-        "tags": [
-          "usage-turbines"
-        ],
+        "tags": ["usage-turbines"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -1633,9 +1517,7 @@
         }
       },
       "post": {
-        "tags": [
-          "usage-turbines"
-        ],
+        "tags": ["usage-turbines"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -1668,9 +1550,7 @@
     },
     "/v1/usage-turbines/{id}": {
       "get": {
-        "tags": [
-          "usage-turbines"
-        ],
+        "tags": ["usage-turbines"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1683,9 +1563,7 @@
         }
       },
       "put": {
-        "tags": [
-          "usage-turbines"
-        ],
+        "tags": ["usage-turbines"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1715,9 +1593,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "usage-turbines"
-        ],
+        "tags": ["usage-turbines"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1732,9 +1608,7 @@
     },
     "/v1/contract-key-terms": {
       "get": {
-        "tags": [
-          "contract-key-terms"
-        ],
+        "tags": ["contract-key-terms"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -1777,9 +1651,7 @@
         }
       },
       "post": {
-        "tags": [
-          "contract-key-terms"
-        ],
+        "tags": ["contract-key-terms"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -1810,9 +1682,7 @@
     },
     "/v1/contract-key-terms/{id}": {
       "get": {
-        "tags": [
-          "contract-key-terms"
-        ],
+        "tags": ["contract-key-terms"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1825,9 +1695,7 @@
         }
       },
       "put": {
-        "tags": [
-          "contract-key-terms"
-        ],
+        "tags": ["contract-key-terms"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1856,9 +1724,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "contract-key-terms"
-        ],
+        "tags": ["contract-key-terms"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1873,9 +1739,7 @@
     },
     "/v1/contract-pjbgs": {
       "get": {
-        "tags": [
-          "contract-pjbgs"
-        ],
+        "tags": ["contract-pjbgs"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -1903,9 +1767,7 @@
         }
       },
       "post": {
-        "tags": [
-          "contract-pjbgs"
-        ],
+        "tags": ["contract-pjbgs"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -1931,9 +1793,7 @@
     },
     "/v1/contract-pjbgs/{id}": {
       "get": {
-        "tags": [
-          "contract-pjbgs"
-        ],
+        "tags": ["contract-pjbgs"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1946,9 +1806,7 @@
         }
       },
       "put": {
-        "tags": [
-          "contract-pjbgs"
-        ],
+        "tags": ["contract-pjbgs"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1976,9 +1834,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "contract-pjbgs"
-        ],
+        "tags": ["contract-pjbgs"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -1993,9 +1849,7 @@
     },
     "/v1/offers": {
       "get": {
-        "tags": [
-          "offers"
-        ],
+        "tags": ["offers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -2053,9 +1907,7 @@
         }
       },
       "post": {
-        "tags": [
-          "offers"
-        ],
+        "tags": ["offers"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -2085,9 +1937,7 @@
     },
     "/v1/offers/{id}": {
       "get": {
-        "tags": [
-          "offers"
-        ],
+        "tags": ["offers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2100,9 +1950,7 @@
         }
       },
       "put": {
-        "tags": [
-          "offers"
-        ],
+        "tags": ["offers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2131,9 +1979,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "offers"
-        ],
+        "tags": ["offers"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2148,9 +1994,7 @@
     },
     "/v1/invoices": {
       "get": {
-        "tags": [
-          "invoices"
-        ],
+        "tags": ["invoices"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -2202,9 +2046,7 @@
         }
       },
       "post": {
-        "tags": [
-          "invoices"
-        ],
+        "tags": ["invoices"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -2238,9 +2080,7 @@
     },
     "/v1/invoices/{id}": {
       "get": {
-        "tags": [
-          "invoices"
-        ],
+        "tags": ["invoices"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2253,9 +2093,7 @@
         }
       },
       "put": {
-        "tags": [
-          "invoices"
-        ],
+        "tags": ["invoices"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2285,9 +2123,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "invoices"
-        ],
+        "tags": ["invoices"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2302,9 +2138,7 @@
     },
     "/v1/invoice-usages": {
       "get": {
-        "tags": [
-          "invoice-usages"
-        ],
+        "tags": ["invoice-usages"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -2332,9 +2166,7 @@
         }
       },
       "post": {
-        "tags": [
-          "invoice-usages"
-        ],
+        "tags": ["invoice-usages"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -2360,9 +2192,7 @@
     },
     "/v1/invoice-usages/{id}": {
       "get": {
-        "tags": [
-          "invoice-usages"
-        ],
+        "tags": ["invoice-usages"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2375,9 +2205,7 @@
         }
       },
       "put": {
-        "tags": [
-          "invoice-usages"
-        ],
+        "tags": ["invoice-usages"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2405,9 +2233,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "invoice-usages"
-        ],
+        "tags": ["invoice-usages"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2422,9 +2248,7 @@
     },
     "/v1/deposits": {
       "get": {
-        "tags": [
-          "deposits"
-        ],
+        "tags": ["deposits"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -2455,9 +2279,7 @@
         }
       },
       "post": {
-        "tags": [
-          "deposits"
-        ],
+        "tags": ["deposits"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -2484,9 +2306,7 @@
     },
     "/v1/deposits/{id}": {
       "get": {
-        "tags": [
-          "deposits"
-        ],
+        "tags": ["deposits"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2499,9 +2319,7 @@
         }
       },
       "put": {
-        "tags": [
-          "deposits"
-        ],
+        "tags": ["deposits"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2529,9 +2347,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "deposits"
-        ],
+        "tags": ["deposits"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2546,9 +2362,7 @@
     },
     "/v1/expenses": {
       "get": {
-        "tags": [
-          "expenses"
-        ],
+        "tags": ["expenses"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -2597,9 +2411,7 @@
         }
       },
       "post": {
-        "tags": [
-          "expenses"
-        ],
+        "tags": ["expenses"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -2632,9 +2444,7 @@
     },
     "/v1/expenses/{id}": {
       "get": {
-        "tags": [
-          "expenses"
-        ],
+        "tags": ["expenses"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2647,9 +2457,7 @@
         }
       },
       "put": {
-        "tags": [
-          "expenses"
-        ],
+        "tags": ["expenses"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2677,9 +2485,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "expenses"
-        ],
+        "tags": ["expenses"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2694,9 +2500,7 @@
     },
     "/v1/petty-cashes": {
       "get": {
-        "tags": [
-          "petty-cashes"
-        ],
+        "tags": ["petty-cashes"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -2739,9 +2543,7 @@
         }
       },
       "post": {
-        "tags": [
-          "petty-cashes"
-        ],
+        "tags": ["petty-cashes"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -2772,9 +2574,7 @@
     },
     "/v1/petty-cashes/{id}": {
       "get": {
-        "tags": [
-          "petty-cashes"
-        ],
+        "tags": ["petty-cashes"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2787,9 +2587,7 @@
         }
       },
       "put": {
-        "tags": [
-          "petty-cashes"
-        ],
+        "tags": ["petty-cashes"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2817,9 +2615,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "petty-cashes"
-        ],
+        "tags": ["petty-cashes"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2834,9 +2630,7 @@
     },
     "/v1/cash-advances": {
       "get": {
-        "tags": [
-          "cash-advances"
-        ],
+        "tags": ["cash-advances"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -2870,9 +2664,7 @@
         }
       },
       "post": {
-        "tags": [
-          "cash-advances"
-        ],
+        "tags": ["cash-advances"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -2900,9 +2692,7 @@
     },
     "/v1/cash-advances/{id}": {
       "get": {
-        "tags": [
-          "cash-advances"
-        ],
+        "tags": ["cash-advances"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2915,9 +2705,7 @@
         }
       },
       "put": {
-        "tags": [
-          "cash-advances"
-        ],
+        "tags": ["cash-advances"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2946,9 +2734,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "cash-advances"
-        ],
+        "tags": ["cash-advances"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2963,9 +2749,7 @@
     },
     "/v1/cash-advances/{id}/approve": {
       "post": {
-        "tags": [
-          "cash-advances"
-        ],
+        "tags": ["cash-advances"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -2994,9 +2778,7 @@
     },
     "/v1/cash-advances/{id}/reject": {
       "post": {
-        "tags": [
-          "cash-advances"
-        ],
+        "tags": ["cash-advances"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3025,9 +2807,7 @@
     },
     "/v1/payrolls": {
       "get": {
-        "tags": [
-          "payrolls"
-        ],
+        "tags": ["payrolls"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -3079,9 +2859,7 @@
         }
       },
       "post": {
-        "tags": [
-          "payrolls"
-        ],
+        "tags": ["payrolls"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -3115,9 +2893,7 @@
     },
     "/v1/payrolls/{id}": {
       "get": {
-        "tags": [
-          "payrolls"
-        ],
+        "tags": ["payrolls"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3130,9 +2906,7 @@
         }
       },
       "put": {
-        "tags": [
-          "payrolls"
-        ],
+        "tags": ["payrolls"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3161,9 +2935,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "payrolls"
-        ],
+        "tags": ["payrolls"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3178,9 +2950,7 @@
     },
     "/v1/users/me": {
       "get": {
-        "tags": [
-          "users"
-        ],
+        "tags": ["users"],
         "responses": {
           "200": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -3188,9 +2958,7 @@
         }
       },
       "put": {
-        "tags": [
-          "users"
-        ],
+        "tags": ["users"],
         "responses": {
           "200": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -3216,9 +2984,7 @@
     },
     "/v1/users/update/profile-picture": {
       "put": {
-        "tags": [
-          "users"
-        ],
+        "tags": ["users"],
         "requestBody": {
           "required": true,
           "content": {
@@ -3231,9 +2997,7 @@
                     "format": "binary"
                   }
                 },
-                "required": [
-                  "profilePicture"
-                ]
+                "required": ["profilePicture"]
               }
             }
           }
@@ -3247,9 +3011,7 @@
     },
     "/v1/coa-categories": {
       "get": {
-        "tags": [
-          "coa-categories"
-        ],
+        "tags": ["coa-categories"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -3271,9 +3033,7 @@
         }
       },
       "post": {
-        "tags": [
-          "coa-categories"
-        ],
+        "tags": ["coa-categories"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -3297,9 +3057,7 @@
     },
     "/v1/coa-categories/{id}": {
       "get": {
-        "tags": [
-          "coa-categories"
-        ],
+        "tags": ["coa-categories"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3312,9 +3070,7 @@
         }
       },
       "put": {
-        "tags": [
-          "coa-categories"
-        ],
+        "tags": ["coa-categories"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3341,9 +3097,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "coa-categories"
-        ],
+        "tags": ["coa-categories"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3358,9 +3112,7 @@
     },
     "/v1/accounting-coa": {
       "get": {
-        "tags": [
-          "accounting-coa"
-        ],
+        "tags": ["accounting-coa"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -3391,9 +3143,7 @@
         }
       },
       "post": {
-        "tags": [
-          "accounting-coa"
-        ],
+        "tags": ["accounting-coa"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -3410,7 +3160,7 @@
               "example": {
                 "code": "4001",
                 "name": "Sales Revenue",
-                "initialbalance": 0,
+                "initialBalance": 0,
                 "CoACategoryId": "7fddc60a-4f98-4a5b-ad11-a2269f6cbb9b"
               }
             }
@@ -3420,9 +3170,7 @@
     },
     "/v1/accounting-coa/{id}": {
       "get": {
-        "tags": [
-          "accounting-coa"
-        ],
+        "tags": ["accounting-coa"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3435,9 +3183,7 @@
         }
       },
       "put": {
-        "tags": [
-          "accounting-coa"
-        ],
+        "tags": ["accounting-coa"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3459,7 +3205,7 @@
               "example": {
                 "code": "4001",
                 "name": "Sales Revenue Updated",
-                "initialbalance": 0,
+                "initialBalance": 0,
                 "CoACategoryId": "7fddc60a-4f98-4a5b-ad11-a2269f6cbb9b"
               }
             }
@@ -3467,9 +3213,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "accounting-coa"
-        ],
+        "tags": ["accounting-coa"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3484,9 +3228,7 @@
     },
     "/v1/accounting-journals": {
       "get": {
-        "tags": [
-          "accounting-journals"
-        ],
+        "tags": ["accounting-journals"],
         "parameters": [
           {
             "$ref": "#/components/parameters/PageQuery"
@@ -3517,9 +3259,7 @@
         }
       },
       "post": {
-        "tags": [
-          "accounting-journals"
-        ],
+        "tags": ["accounting-journals"],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -3557,9 +3297,7 @@
     },
     "/v1/accounting-journals/{id}": {
       "get": {
-        "tags": [
-          "accounting-journals"
-        ],
+        "tags": ["accounting-journals"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3572,9 +3310,7 @@
         }
       },
       "put": {
-        "tags": [
-          "accounting-journals"
-        ],
+        "tags": ["accounting-journals"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3610,18 +3346,14 @@
                     "credit": 250000
                   }
                 ],
-                "removed_entry_ids": [
-                  "7fddc60a-4f98-4a5b-ad11-a2269f6cbb9b"
-                ]
+                "removed_entry_ids": ["7fddc60a-4f98-4a5b-ad11-a2269f6cbb9b"]
               }
             }
           }
         }
       },
       "delete": {
-        "tags": [
-          "accounting-journals"
-        ],
+        "tags": ["accounting-journals"],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3636,9 +3368,7 @@
     },
     "/v1/dashboard/summary": {
       "get": {
-        "tags": [
-          "dashboard"
-        ],
+        "tags": ["dashboard"],
         "parameters": [
           {
             "$ref": "#/components/parameters/MonthQuery"
@@ -3656,9 +3386,7 @@
     },
     "/v1/accounting/reports/income-statement": {
       "get": {
-        "tags": [
-          "accounting"
-        ],
+        "tags": ["accounting"],
         "parameters": [
           {
             "$ref": "#/components/parameters/MonthQuery"
@@ -4727,12 +4455,7 @@
     "schemas": {
       "AuthSignupRequest": {
         "type": "object",
-        "required": [
-          "fullname",
-          "email",
-          "password",
-          "confirmPassword"
-        ],
+        "required": ["fullname", "email", "password", "confirmPassword"],
         "properties": {
           "fullname": {
             "type": "string"
@@ -4751,10 +4474,7 @@
       },
       "AuthSigninRequest": {
         "type": "object",
-        "required": [
-          "email",
-          "password"
-        ],
+        "required": ["email", "password"],
         "properties": {
           "email": {
             "type": "string",
@@ -4776,9 +4496,7 @@
       },
       "CashAdvanceRejectRequest": {
         "type": "object",
-        "required": [
-          "reason"
-        ],
+        "required": ["reason"],
         "properties": {
           "reason": {
             "type": "string",
