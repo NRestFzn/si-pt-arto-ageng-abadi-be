@@ -1,4 +1,4 @@
-import { BelongsTo, Column, HasMany, Table, Unique } from 'sequelize-typescript'
+import { BelongsTo, Column, Table, Unique } from 'sequelize-typescript'
 import BaseSchema from './_baseModel'
 import { DataTypes } from 'sequelize'
 import CoACategory from './coaCategory'
@@ -22,6 +22,9 @@ export default class AccountingCoA extends BaseSchema {
   @Column({ allowNull: false, type: DataTypes.UUID })
   CoACategoryId: string
 
-  @BelongsTo(() => CoACategory)
+  @BelongsTo(() => CoACategory, {
+    foreignKey: 'CoaCategoryId',
+    targetKey: 'id',
+  })
   coaCategory!: CoACategory
 }
