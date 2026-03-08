@@ -6,6 +6,10 @@ export const allowedOrigins: string[] = [
   'https://si-pt-arto-ageng-abadi.vercel.app',
 ]
 
+const normalizedAllowedOrigins = allowedOrigins.map((item) =>
+  item.toLowerCase().replace(/\/$/, '')
+)
+
 const allowedHeaders: string[] = [
   'Content-Type',
   'Authorization',
@@ -17,11 +21,11 @@ const allowedHeaders: string[] = [
 
 export const corsOptions: CorsOptions = {
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
+    const normalizedOrigin = origin?.toLowerCase().replace(/\/$/, '')
+    const isAllowed =
+      !normalizedOrigin || normalizedAllowedOrigins.includes(normalizedOrigin)
+
+    callback(null, isAllowed)
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
