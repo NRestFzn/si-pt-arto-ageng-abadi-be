@@ -23,12 +23,17 @@ import { ExpenseController } from './controller/expense.controller'
 import { PettyCashController } from './controller/pettyCash.controller'
 import { CashAdvanceController } from './controller/cashAdvance.controller'
 import { PayrollController } from './controller/payroll.controller'
+import { CoACategoryController } from './controller/coaCategory.controller'
+import { AccountingCoAController } from './controller/accountingCoA.controller'
+import { AccountingJournalController } from './controller/accountingJournal.controller'
+import { DashboardController } from './controller/dashboard.controller'
+import { AccountingController } from './controller/accounting.controller'
 
 const Route: Router = express.Router()
 
 Route.use('/role', RoleController)
 Route.use('/auth', AuthController)
-Route.use('/user', UserController)
+Route.use('/users', UserController)
 Route.use('/navigations', NavigationController)
 Route.use('/role-has-navigations', RoleHasNavigationController)
 Route.use('/user-has-navigations', UserHasNavigationController)
@@ -50,5 +55,10 @@ Route.use('/expenses', ExpenseController)
 Route.use('/petty-cashes', PettyCashController)
 Route.use('/cash-advances', CashAdvanceController)
 Route.use('/payrolls', PayrollController)
+Route.use('/coa-categories', CoACategoryController)
+Route.use('/accounting-coa', AccountingCoAController)
+Route.use('/accounting-journals', AccountingJournalController)
+Route.use('/dashboard', DashboardController)
+Route.use('/accounting', AccountingController)
 
 export { Route as v1Route }
