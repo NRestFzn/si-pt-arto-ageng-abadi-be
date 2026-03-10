@@ -4,32 +4,38 @@ import { BaseQueryRequest } from '@/routes/version1/request/_baseQueryRequest'
 import { NavigationQueryFilterDto } from '../dto'
 
 export class NavigationQueryRepository extends BaseQueryRequest {
-  public name?: string
-  public path?: string
+  public title?: string
+  public url?: string
+  public group?: string
 
   constructor(req: Request) {
     super(req)
 
     const query = req.query as unknown as NavigationQueryFilterDto
 
-    const nameValue = query.name as unknown
-    this.name = typeof nameValue === 'string' ? nameValue : undefined
+    const titleValue = query.title as unknown
+    this.title = typeof titleValue === 'string' ? titleValue : undefined
 
-    const pathValue = query.path as unknown
-    this.path = typeof pathValue === 'string' ? pathValue : undefined
+    const urlValue = query.url as unknown
+    this.url = typeof urlValue === 'string' ? urlValue : undefined
+
+    const groupValue = query.group as unknown
+    this.group = typeof groupValue === 'string' ? groupValue : undefined
   }
-
-
 
   public queryFilter(): FindOptions {
     const whereCondition: WhereOptions<NavigationQueryFilterDto>[] = []
 
-    if (this.name !== undefined && this.name !== null && this.name !== '') {
-      whereCondition.push({ name: { [Op.like]: `%${this.name}%` } })
+    if (this.title !== undefined && this.title !== null && this.title !== '') {
+      whereCondition.push({ title: { [Op.like]: `%${this.title}%` } })
     }
 
-    if (this.path !== undefined && this.path !== null && this.path !== '') {
-      whereCondition.push({ path: { [Op.like]: `%${this.path}%` } })
+    if (this.url !== undefined && this.url !== null && this.url !== '') {
+      whereCondition.push({ url: { [Op.like]: `%${this.url}%` } })
+    }
+
+    if (this.group !== undefined && this.group !== null && this.group !== '') {
+      whereCondition.push({ group: this.group })
     }
 
     return {

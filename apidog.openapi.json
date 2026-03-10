@@ -173,23 +173,9 @@
     "/v1/navigations": {
       "get": {
         "tags": ["navigations"],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/PageQuery"
-          },
-          {
-            "$ref": "#/components/parameters/PageSizeQuery"
-          },
-          {
-            "$ref": "#/components/parameters/OrderQuery"
-          },
-          {
-            "$ref": "#/components/parameters/NameQuery"
-          },
-          {
-            "$ref": "#/components/parameters/PathQuery"
-          }
-        ],
+        "summary": "Get navigations grouped by group",
+        "description": "Returns navigation items grouped by their group (Overview, Master Data, Operasional, Keuangan, Accounting, Pengaturan). Each item includes id for use in update/delete. Requires authorization.",
+        "security": [{"BearerAuth": []}],
         "responses": {
           "200": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -198,6 +184,8 @@
       },
       "post": {
         "tags": ["navigations"],
+        "summary": "Create navigation item",
+        "security": [{"BearerAuth": []}],
         "responses": {
           "201": {
             "$ref": "#/components/responses/SuccessResponse"
@@ -209,11 +197,23 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "additionalProperties": true
+                "properties": {
+                  "title": { "type": "string" },
+                  "url": { "type": "string" },
+                  "icon": { "type": "string", "nullable": true },
+                  "group": {
+                    "type": "string",
+                    "enum": ["Overview", "Master Data", "Operasional", "Keuangan", "Accounting", "Pengaturan"],
+                    "nullable": true
+                  }
+                },
+                "required": ["title", "url"]
               },
               "example": {
-                "name": "Dashboard",
-                "path": "/dashboard"
+                "title": "Dashboard",
+                "url": "/overview",
+                "icon": "LayoutDashboard",
+                "group": "Overview"
               }
             }
           }
@@ -223,6 +223,8 @@
     "/v1/navigations/{id}": {
       "get": {
         "tags": ["navigations"],
+        "summary": "Get navigation item by ID",
+        "security": [{"BearerAuth": []}],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -236,6 +238,8 @@
       },
       "put": {
         "tags": ["navigations"],
+        "summary": "Update navigation item",
+        "security": [{"BearerAuth": []}],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -252,11 +256,22 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "additionalProperties": true
+                "properties": {
+                  "title": { "type": "string" },
+                  "url": { "type": "string" },
+                  "icon": { "type": "string", "nullable": true },
+                  "group": {
+                    "type": "string",
+                    "enum": ["Overview", "Master Data", "Operasional", "Keuangan", "Accounting", "Pengaturan"],
+                    "nullable": true
+                  }
+                }
               },
               "example": {
-                "name": "Settings",
-                "path": "/settings"
+                "title": "Pengaturan",
+                "url": "/settings",
+                "icon": "Settings",
+                "group": "Pengaturan"
               }
             }
           }
@@ -264,6 +279,8 @@
       },
       "delete": {
         "tags": ["navigations"],
+        "summary": "Delete navigation item",
+        "security": [{"BearerAuth": []}],
         "parameters": [
           {
             "$ref": "#/components/parameters/IdPath"
@@ -3524,6 +3541,34 @@
           "type": "string"
         },
         "description": "Filter by path"
+      },
+      "TitleQuery": {
+        "name": "title",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by title"
+      },
+      "UrlQuery": {
+        "name": "url",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Filter by url"
+      },
+      "GroupQuery": {
+        "name": "group",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "enum": ["Overview", "Master Data", "Operasional", "Keuangan", "Accounting", "Pengaturan"]
+        },
+        "description": "Filter by navigation group"
       },
       "RoleIdQuery": {
         "name": "role_id",
